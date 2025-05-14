@@ -1,9 +1,9 @@
-import type { UserConfig } from "@commitlint/types"; 
+import type { UserConfig } from "@commitlint/types";
 import { RuleConfigSeverity } from "@commitlint/types"
 
 export default {
     extends: ['@commitlint/config-conventional'],
-    prompt:{
+    prompt: {
         messages: {
             skip: '跳过',
             maxSubjectLength: '请输入小于{{limit}}个字符的描述',
@@ -14,26 +14,26 @@ export default {
             typeEnum: '请输入{{enum}}中的一个',
             scopeEnum: '请输入{{enum}}中的一个',
         },
-        questions:{
-            type:{
-                description:"请选择提交类型",
-                enum:{
-                    feat:{
-                        description:"增加新功能",
-                        title:"feat",
+        questions: {
+            type: {
+                description: "请选择提交类型",
+                enum: {
+                    feat: {
+                        description: "增加新功能",
+                        title: "feat",
                     }
                 }
             }
         },
         scope: {
             description:
-              'What is the scope of this change (e.g. component or file name)',
-          },
-          subject: {
+                'What is the scope of this change (e.g. component or file name)',
+        },
+        subject: {
             description: 'Write a short, imperative tense description of the change',
-          },
-          body: {
+        },
+        body: {
             description: 'Provide a longer description of the change',
-          },
+        },
     }
 } as UserConfig;
