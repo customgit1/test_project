@@ -10,7 +10,7 @@
     "lint": "eslint",
     "lint:fix": "eslint --fix",
     "commit": "git-cz",
-    "commitlint": "commitlint",
+    "commitlint": "commitlint --edit",
     "prepare": "husky install"
   },
   "config": {
