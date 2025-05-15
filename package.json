@@ -1,13 +1,14 @@
 {
   "name": "vite-project",
-  "private": true,
-  "version": "0.0.0",
   "type": "module",
+  "version": "0.0.0",
+  "private": true,
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc -b && vite build",
     "preview": "vite preview",
-    "lint:eslint": "eslint --fix --ext .js,.ts,.vue ./src",
+    "lint": "eslint",
+    "lint:fix": "eslint --fix",
     "commit": "git-cz",
     "commitlint": "commitlint",
     "prepare": "husky install"
@@ -21,6 +22,7 @@
     "vue": "^3.5.13"
   },
   "devDependencies": {
+    "@antfu/eslint-config": "^4.13.0",
     "@commitlint/cli": "^19.8.1",
     "@commitlint/config-conventional": "^19.8.1",
     "@vitejs/plugin-vue": "^5.2.3",
