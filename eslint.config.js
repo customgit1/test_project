@@ -1,9 +1,6 @@
 import eslintConfig from "@antfu/eslint-config"
 
 export default eslintConfig({
-  typescript: {
-    tsconfigPath: "tsconfig.json",
-  },
   stylistic: {
     indent: 2,
     quotes: "double",
@@ -33,6 +30,13 @@ export default eslintConfig({
     },
   },
   formatters: {
+    prettierOptions: {
+      endOfLine: "crlf",
+    },
     css: true,
   },
+  ignores: [
+    "dist/**",
+    "node_modules/**",
+  ],
 })

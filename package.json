@@ -9,7 +9,6 @@
     "preview": "vite preview",
     "lint": "eslint",
     "lint:fix": "eslint --fix",
-    "commit": "git-cz",
     "commitlint": "commitlint --edit",
     "prepare": "husky install"
   },
@@ -27,12 +26,21 @@
     "eslint-plugin-format": "^1.0.1",
     "husky": "^9.1.7",
     "lint-staged": "^16.0.0",
+    "postcss-html": "^1.8.0",
     "sass": "^1.88.0",
     "stylelint": "^16.19.1",
+    "stylelint-config-recess-order": "^6.0.0",
+    "stylelint-config-recommended-vue": "^1.6.0",
     "stylelint-config-standard-scss": "^15.0.0",
+    "stylelint-config-standard-vue": "^1.0.0",
     "typescript": "~5.8.3",
     "vite": "^6.3.5",
     "vue-tsc": "^2.2.8"
+  },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-git"
+    }
   },
   "lint-staged": {
     "*.{js,ts,vue}": [
@@ -41,20 +49,5 @@
     "*.{css,less,scss}": [
       "stylelint --fix"
     ]
-  },
-  "stylelint": {
-    "extends": [
-      "stylelint-config-standard-scss"
-    ],
-    "rules": {
-      "selector-pseudo-class-no-unknown": [
-        true,
-        {
-          "ignorePseudoClasses": [
-            "deep"
-          ]
-        }
-      ]
-    }
   }
 }
