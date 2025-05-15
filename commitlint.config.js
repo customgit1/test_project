@@ -1,9 +1,8 @@
 import { defineConfig } from 'cz-git'
 
-
 export default defineConfig({
-    extends: ["@commitlint/config-conventional"],
-    rules: {
+  extends: ['@commitlint/config-conventional'],
+  rules: {
     // @see: https://commitlint.js.org/#/reference-rules
     "body-leading-blank": [2, "always"],
     "footer-leading-blank": [1, "always"],
@@ -31,9 +30,9 @@ export default defineConfig({
         "types",
         "release"
       ]
-    ]
+    ],
   },
-    prompt:{
+  prompt: {
         messages: {
             type: '选择你要提交的类型 :',
             scope: '选择一个提交范围（可选）:',
