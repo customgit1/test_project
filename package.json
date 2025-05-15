@@ -32,6 +32,7 @@
     "husky": "^9.1.7",
     "lint-staged": "^16.0.0",
     "stylelint": "^16.19.1",
+    "stylelint-config-standard": "^38.0.0",
     "typescript": "~5.8.3",
     "vite": "^6.3.5",
     "vue-tsc": "^2.2.8"
@@ -39,6 +40,26 @@
   "lint-staged": {
     "*.{js,ts,vue}": [
       "eslint --fix"
+    ],
+    "*.{css,less,scss}": [
+      "stylelint --fix"
     ]
+  },
+  "stylelint": {
+    "extends": [
+      "stylelint-config-standard"
+    ],
+    "rules": {
+      "selector-class-pattern": null,
+      "selector-id-pattern": null,
+      "selector-pseudo-class-no-unknown": [
+        true,
+        {
+          "ignorePseudoClasses": [
+            "deep"
+          ]
+        }
+      ]
+    }
   }
 }
