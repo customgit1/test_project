@@ -2,7 +2,6 @@ import { defineConfig } from 'cz-git'
 
 export default defineConfig({
   extends: ['@commitlint/config-conventional'],
-
   rules: {
     // @see: https://commitlint.js.org/#/reference-rules
     'body-leading-blank': [2, 'always'],
@@ -26,10 +25,6 @@ export default defineConfig({
         'ci',
         'chore',
         'revert',
-        'wip',
-        'workflow',
-        'types',
-        'release',
       ],
     ],
   },
