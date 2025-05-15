@@ -24,6 +24,7 @@
     "@vue/tsconfig": "^0.7.0",
     "cz-git": "^1.11.1",
     "eslint": "^9.26.0",
+    "eslint-plugin-format": "^1.0.1",
     "husky": "^9.1.7",
     "lint-staged": "^16.0.0",
     "sass": "^1.88.0",
@@ -46,8 +47,6 @@
       "stylelint-config-standard-scss"
     ],
     "rules": {
-      "selector-class-pattern": null,
-      "selector-id-pattern": null,
       "selector-pseudo-class-no-unknown": [
         true,
         {
