@@ -1,6 +1,9 @@
 import eslintConfig from "@antfu/eslint-config"
 
 export default eslintConfig({
+  jsonc: false,
+  yaml: false,
+  toml: false,
   stylistic: {
     indent: 2,
     quotes: "double",
@@ -33,4 +36,4 @@ export default eslintConfig({
     "dist/**",
     "node_modules/**",
   ],
-})
+}, { files: ["*.ts"], rules: {} }, { files: ["*.js"], rules: {} })
